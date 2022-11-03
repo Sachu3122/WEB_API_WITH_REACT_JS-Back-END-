@@ -1,0 +1,133 @@
+﻿@model FinalDraft.Model.Main
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>Main</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="InspectionDate" class="control-label"></label>
+                <input asp-for="InspectionDate" class="form-control" />
+                <span asp-validation-for="InspectionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstId" class="control-label"></label>
+                <input asp-for="FirstId" class="form-control" />
+                <span asp-validation-for="FirstId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdditionalId" class="control-label"></label>
+                <input asp-for="AdditionalId" class="form-control" />
+                <span asp-validation-for="AdditionalId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DoorCard" class="control-label"></label>
+                <input asp-for="DoorCard" class="form-control" />
+                <span asp-validation-for="DoorCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Describe" class="control-label"></label>
+                <input asp-for="Describe" class="form-control" />
+                <span asp-validation-for="Describe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNum" class="control-label"></label>
+                <input asp-for="PhoneNum" class="form-control" />
+                <span asp-validation-for="PhoneNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrimaryPhoneIs" class="control-label"></label>
+                <input asp-for="PrimaryPhoneIs" class="form-control" />
+                <span asp-validation-for="PrimaryPhoneIs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocationCon" class="control-label"></label>
+                <input asp-for="LocationCon" class="form-control" />
+                <span asp-validation-for="LocationCon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment" class="control-label"></label>
+                <input asp-for="Equipment" class="form-control" />
+                <span asp-validation-for="Equipment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InspectionComments" class="control-label"></label>
+                <input asp-for="InspectionComments" class="form-control" />
+                <span asp-validation-for="InspectionComments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="States" class="control-label"></label>
+                <input asp-for="States" class="form-control" />
+                <span asp-validation-for="States" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Postal" class="control-label"></label>
+                <input asp-for="Postal" class="form-control" />
+                <span asp-validation-for="Postal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CrctAdd" class="control-label"></label>
+                <input asp-for="CrctAdd" class="form-control" />
+                <span asp-validation-for="CrctAdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddrsExplaination" class="control-label"></label>
+                <input asp-for="AddrsExplaination" class="form-control" />
+                <span asp-validation-for="AddrsExplaination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GeoCode" class="control-label"></label>
+                <input asp-for="GeoCode" class="form-control" />
+                <span asp-validation-for="GeoCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PropertyPhoto" class="control-label"></label>
+                <input asp-for="PropertyPhoto" class="form-control" />
+                <span asp-validation-for="PropertyPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mapcode" class="control-label"></label>
+                <input asp-for="Mapcode" class="form-control" />
+                <span asp-validation-for="Mapcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>
